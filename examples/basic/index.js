@@ -1,3 +1,3 @@
 var livingcss = require('../../index');
 
-livingcss('buttons.css');
+livingcss('buttons.css', '../../styleguide');

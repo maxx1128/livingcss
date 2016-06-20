@@ -5,6 +5,8 @@
  *
  * @section
  *
+ * @newCat Name - Description
+ *
  * @example
  * <button class="btn">Button</button>
  * <input type="submit" class="btn" value="Input"/>
@@ -40,6 +42,7 @@
  * A primary button
  *
  * @section
+ * @sectionof Buttons
  *
  * @example
  * <button class="btn primary">Button</button>

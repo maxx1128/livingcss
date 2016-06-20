@@ -1,4 +1,16 @@
-<div class="livingcss__section-description">{{{description}}}</div>
+<div class="livingcss__section-description">
+  {{{description}}}
+</div>
+
+{{#if newCat}}
+  <h3>
+    {{newCat.name}}
+  </h3>
+
+  <h6>
+    {{newCat.description}}
+  </h6>
+{{/if}}
 
 {{#if example}}
 <livingcss-example>{{{example.description}}}</livingcss-example>
