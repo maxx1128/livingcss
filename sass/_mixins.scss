@@ -1,0 +1,22 @@
+// Mixin for getting screen sizes
+@mixin larger-than($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+// Mixin to use with the breakpoint map, sets any styles to be used below a certain screen width. Try to use the larger-than mixin unless it can't be avoided.
+@mixin smaller-than($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+
+// For adding styles fast to all hover states
+// Useful for buttons, links, and the like
+@mixin hovers() {
+  &:hover,
+  &:focus,
+  &:active { @content; }
+}

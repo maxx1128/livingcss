@@ -98,9 +98,23 @@
 
       <nav class="livingcss__nav">
         <div class="livingcss__nav-container">
-        {{#each sections}}
-          <a class="livingcss__nav-link" href="#{{id}}">{{name}}</a>
-        {{/each}}
+          <ul>
+            {{#each sections}}
+              <li>
+                <a class="livingcss__nav-link" href="#{{id}}">{{name}}</a>
+              </li>
+
+              {{#if children}}
+                <ul>
+                  {{#each children}}
+                    <li>
+                      <a class="livingcss__nav-link" href="#{{id}}">{{name}}</a>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            {{/each}}
+          </ul>
         </div>
       </nav>
 

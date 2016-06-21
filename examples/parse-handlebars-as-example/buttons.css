@@ -1,13 +1,27 @@
 /**
  * Buttons
  *
- * The Button `.btn` class can be applied to `<button>`, `<input>`, or `<a>` elements.
+ * Buttons do lots of fun things! You click them! They take you places! Who doesn't love buttons?
  *
  * @section
+ */
+
+/**
+ * Main Buttons
  *
- * @accept Can be used for X, Y, and Z. Maybe Q if you're desperate.
+ * The Button `.btn` class can be applied to `<button>`, `<input>`, or `<a>` elements.
  *
- * @unaccept Should never be used for A, B, and C. Only for J if you have a death wish.
+ *
+ * #### Acceptable Use
+ *
+ * Can be used for X, Y, and Z. Maybe Q if you're desperate.
+ *
+ * #### Avoid
+ *
+ * Should never be used for A, B, and C. Only for J if you have a death wish.
+ *
+ * @section
+ * @sectionof Buttons
  *
  * @button Button
  * @input Input
@@ -40,17 +54,16 @@
 }
 
 /**
- * Primary Button
+ * Primary Buttons
  *
- * A primary button
  *
- * @section Primary Button
+ * @section
  * @sectionof Buttons
  *
  * @example
  * <button class="btn primary">Button</button>
  * <input type="submit" class="btn primary" value="Input"/>
- * <a href="#" class="btn primary">Anchor</a>
+ * <a href="javascript:void(0)" class="btn primary">Anchor</a>
  */
 .btn.primary {
   background-color: #60b044;
@@ -67,4 +80,63 @@
 .btn.smaller {
   font-size: 10px;
   padding: 4px 10px;
+}
+
+
+
+
+
+
+h1, h2, h3, h4 {
+  font-family: "Skolar Bold", "Segoe UI Bold", "Roboto Slab", "Droid Serif",
+  AvenirNext-Bold, "Avenir Bold", Georgia,
+  "Times New Roman", Times, serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.25rem;  
+  line-height: 3.25rem;
+}
+
+h2 {
+  font-size: 1.875rem; 
+  line-height: 3.25rem;
+}
+
+h3 {
+  font-size: 1.625rem; 
+  line-height: 3.25rem;
+}
+
+h4 {
+  font-size: 1.375rem; 
+}
+
+h5 {
+  font-size: 1.125rem; 
+}
+
+h4, h5, h6 {
+  line-height: 1.625rem;
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  margin: 0 0 1.625rem 0;
+}
+
+a,
+a:visited {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:hover {
+  color: #1976d2;
+  text-decoration: underline;
 }

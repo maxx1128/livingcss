@@ -1,37 +1,6 @@
 <div class="livingcss__section-description">
   {{{description}}}
 
-  {{#if accept}}
-    <h5>
-      Acceptable Uses
-    </h5>
-
-    <p>
-      {{ accept }}
-    </p>
-  {{/if}}
-
-  {{#if unaccept}}
-    <h5>
-      Avoid
-    </h5>
-
-    <p>
-      {{ unaccept }}
-    </p>
-  {{/if}}
-</div>
-
-{{#if newCat}}
-  <h3>
-    {{newCat.name}}
-  </h3>
-
-  <h6>
-    {{newCat.description}}
-  </h6>
-{{/if}}
-
 {{#if example}}
 <livingcss-example>{{{example.description}}}</livingcss-example>
 {{/if}}
