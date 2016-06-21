@@ -16,5 +16,10 @@ livingcss('buttons.css', {
 
       livingcss.tags.example.call(this);
     }
+  },
+
+  preprocess: function(context, template, Handlebars) {
+    context.title = 'My Awesome Style Guide';
+    context.globalStylesheets = ['buttons.css'];
   }
 });

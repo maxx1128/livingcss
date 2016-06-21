@@ -1,0 +1,15 @@
+/*
+ * GRID
+ */
+.livingcss__wrapper {
+  min-height: 100%;
+  position: relative;
+  transition: right 0.2s;
+  right: 0;
+}
+
+.livingcss__container {
+  padding-left: 0.8125rem;
+  padding-right: 0.8125rem;
+  margin: 0 auto;
+}

@@ -5,6 +5,10 @@
  *
  * @section
  *
+ * @accept Can be used for X, Y, and Z. Maybe Q if you're desperate.
+ *
+ * @unaccept Should never be used for A, B, and C. Only for J if you have a death wish.
+ *
  * @button Button
  * @input Input
  * @anchor Anchor
@@ -40,7 +44,8 @@
  *
  * A primary button
  *
- * @section
+ * @section Primary Button
+ * @sectionof Buttons
  *
  * @example
  * <button class="btn primary">Button</button>

@@ -1,0 +1,89 @@
+
+/*
+ * CONTENT
+ */
+.livingcss__content {
+  padding-bottom: 6.5rem;
+}
+
+/*
+ * MAIN
+ */
+.livingcss__main {
+  margin-top: 1.625rem;
+  order: 2;
+}
+
+.livingcss__article-title {
+  border-bottom: 1px solid #727272;
+  margin-bottom: 1.625rem;
+}
+
+.livingcss__article:first-child .livingcss__article-title {
+  margin-top: 0;
+}
+
+.livingcss__article + .livingcss__article {
+  margin-top: 4.875rem;
+}
+
+.livingcss__section {
+  margin-top: 1.625rem;
+}
+
+livingcss-example { 
+  margin-top: 1em;
+  display: block;
+
+  border: 1px solid #B6B6B6;
+  padding: 1rem;
+  border-radius: .25rem .25rem 0 0;
+}
+
+.livingcss__section-markup {
+  border: 1px solid #B6B6B6;
+  border-top: 0;
+  border-radius: 0 0 .25rem .25rem;
+}
+
+.livingcss__section-code,
+.livingcss__section-code[class*="language-"] {
+  margin: 0;
+  border-radius: 0 0 .25rem .25rem;
+  padding: 0.40625rem 0.8125rem;
+  line-height: 1.625rem;
+}
+
+
+@media (min-width: 993px) {
+  .livingcss__content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .livingcss__container {
+    max-width: 964px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .livingcss__main {
+    flex: 1;
+    max-width: 729px;
+    padding-left: 0.8125rem;
+  }
+}
+
+
+/**
+ * DESKTOP HD BREAKPOINT
+ */
+@media (min-width: 1200px) {
+  .livingcss__container {
+    max-width: 1170px;
+  }
+
+  .livingcss__main {
+    max-width: 935px;
+  }
+}

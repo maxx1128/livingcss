@@ -1,0 +1,50 @@
+/*
+ * HEADER
+ */
+.livingcss__header {
+  position: relative;
+}
+
+.livingcss__header-title-container {
+  background: #2196F3;
+  padding: 0.8125rem 0;
+}
+
+.livingcss__header-title {
+  font-size: 1.625rem;
+  line-height: 1.625rem;
+}
+
+.livingcss__main-nav-container {
+  padding: 0.40625rem 0;
+}
+
+
+.livingcss__nav-link {
+  display: block;
+  padding: 0.40625rem 0.8125rem;
+}
+
+a.livingcss__nav-link:hover,
+a.livingcss__nav-link:active,
+a.livingcss__nav-link:focus,
+a.livingcss__nav-link--active {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #2196F3;
+  color: white;
+  text-decoration: none;
+}
+
+.livingcss__menu {
+  position: absolute;
+  right: 1.625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  font-size: 1rem;
+  background: transparent;
+  cursor: pointer;
+  background: #1976D2;
+  padding: 0.40625rem 0.8125rem;
+}
