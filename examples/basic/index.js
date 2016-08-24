@@ -1,4 +1,4 @@
-var livingcss = require('../../index');
+var livingcss = require('../../index.js');
 
 // livingcss('buttons.css', '../../styleguide');
 

@@ -1,25 +1,42 @@
 <script>
+
 (function(window, document) {
   /**
    * Set the active nav link
    * @param {Element} link - Link to make active.
    */
-  function setActiveLink(link) {
+  function setActiveLink(link, full_item, child) {
     if (link) {
       // remove previously active link
-      var activeLink = document.querySelector('.livingcss__nav .livingcss__nav-link--active');
+      /*var activeLink = document.querySelector('.livingcss__nav .livingcss__nav-link--active');
 
       if (activeLink) {
         activeLink.classList.remove('livingcss__nav-link--active');
-      }
+      }*/
+
+      $('.livingcss__nav-link').removeClass('livingcss__nav-link--active');
 
       link.classList.add('livingcss__nav-link--active');
+
+      $('.livingcss__parent').removeClass('livingcss__parent-link--expanded');
+
+      $(full_item).closest('.livingcss__parent').addClass('livingcss__parent-link--expanded');
+
+      if (child) {
+        $(full_item).closest('.livingcss__parent').find('.livingcss__parent-link').addClass('livingcss__nav-link--active');
+
+        // $(full_item).closest('.livingcss__parent').addClass('livingcss__parent-link--expanded');
+      }
     }
+  }
+
+  function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
   }
 
   // set active link when
   var nav = document.querySelector('.livingcss__nav');
-  var sections = document.querySelectorAll('article.livingcss__article');
+  var sections = $('article.livingcss__article, section.livingcss__section') // document.querySelectorAll('article.livingcss__article');
   var sectionPositions = [];
 
   // set the current link based on the hash
@@ -62,11 +79,17 @@
     // look for which section is being viewed
     else {
       for (var i = 0; i < sections.length; i++) {
+        // console.log(sections);
         if (y >= sectionPositions[i] &&
             (sectionPositions[i+1] ? y < sectionPositions[i+1] : true)) {
           var id = sections[i].getAttribute('id');
           var activeSection = document.querySelector('.livingcss__nav .livingcss__nav-link[href="#'+id+'"]');
-          setActiveLink(activeSection);
+          var childSection = hasClass(activeSection, 'livingcss__nav-link--child');
+
+          var full_activeSection = $('.livingcss__nav .livingcss__nav-link[href="#'+id+'"]');
+
+          setActiveLink(activeSection, full_activeSection, childSection);
+
         }
       }
     }
@@ -80,4 +103,5 @@
     });
   }
 })(window, document);
+
 </script>

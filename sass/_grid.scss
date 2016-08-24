@@ -8,8 +8,42 @@
   right: 0;
 }
 
-.livingcss__container {
-  padding-left: 0.8125rem;
-  padding-right: 0.8125rem;
-  margin: 0 auto;
+.livingcss__nav,
+.livingcss__main {
+  box-sizing: border-box;
+  padding: $small-spacing $base-spacing;
+  margin-top: $small-spacing;
 }
+
+@include larger-than($medium-width) {
+  .livingcss__main {
+    width: 62.5%;
+    float: right;
+  }
+
+  .livingcss__nav {
+    width: 32.5%;
+    float: left;
+  }
+}
+
+@include larger-than($large-width) {
+  .livingcss__main {
+    width: 72.5%;
+  }
+
+  .livingcss__nav {
+    width: 22.5%;
+  }
+}
+
+
+.livingcss__main-nav--open  {
+
+  @include smaller-than($mobile-width) {
+    .livingcss__wrapper {
+       right: 13rem;
+    }
+  }  
+}
+

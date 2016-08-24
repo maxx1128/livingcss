@@ -6,17 +6,20 @@
 }
 
 .livingcss__header-title-container {
-  background: #2196F3;
-  padding: 0.8125rem 0;
+  background: $base-color;
+  padding: $base-spacing;
 }
 
 .livingcss__header-title {
   font-size: 1.625rem;
   line-height: 1.625rem;
+
+  a { color: $white-color !important; }
 }
 
 .livingcss__main-nav-container {
-  padding: 0.40625rem 0;
+  padding: $small-spacing $base-spacing;
+  border-bottom: 1px solid $dark-color;
 }
 
 
@@ -31,8 +34,8 @@ a.livingcss__nav-link:focus,
 a.livingcss__nav-link--active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #2196F3;
-  color: white;
+  background: $light-color !important;
+  color: $white-color !important;
   text-decoration: none;
 }
 

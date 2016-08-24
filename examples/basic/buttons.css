@@ -1,7 +1,7 @@
 /**
  * Buttons
  *
- * The Button `.btn` class can be applied to `<button>`, `<input>`, or `<a>` elements.
+ * The Button `.btn` class can be applied to `<button>`, `<input>`, or `<a>` elements. Extra stuff has now been added here!
  *
  * @section
  *
@@ -11,7 +11,7 @@
  * <button class="btn">Button</button>
  * <input type="submit" class="btn" value="Input"/>
  * <a href="#" class="btn">Anchor</a>
- */
+*/
 
  
 .btn {
@@ -67,3 +67,85 @@
   font-size: 10px;
   padding: 4px 10px;
 }
+
+
+
+/**
+ * Navigation
+ *
+ * Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi vero culpa dolor quisquam aperiam eveniet, sed temporibus accusamus accusantium ad odio veritatis natus tenetur aliquam, distinctio iste minima exercitationem illo!
+ *
+ * @section
+ *
+ * @newCat Name - Description
+ *
+ * @example
+ * <button class="btn">Button</button>
+ * <input type="submit" class="btn" value="Input"/>
+ * <a href="#" class="btn">Anchor</a>
+*/
+
+
+/**
+ * Nav 1
+ *
+ * Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi vero culpa dolor quisquam aperiam eveniet, sed temporibus accusamus accusantium ad odio veritatis natus tenetur aliquam, distinctio iste minima exercitationem illo!
+ *
+ * @section
+ * @sectionof Navigation
+ *
+ * @newCat Name - Description
+ *
+ * @example
+ * <button class="btn">Button</button>
+ * <input type="submit" class="btn" value="Input"/>
+ * <a href="#" class="btn">Anchor</a>
+*/
+
+/**
+ * Nav 2
+ *
+ * Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi vero culpa dolor quisquam aperiam eveniet, sed temporibus accusamus accusantium ad odio veritatis natus tenetur aliquam, distinctio iste minima exercitationem illo!
+ *
+ * @section
+ * @sectionof Navigation
+ *
+ * @newCat Name - Description
+ *
+ * @example
+ * <button class="btn">Button</button>
+ * <input type="submit" class="btn" value="Input"/>
+ * <a href="#" class="btn">Anchor</a>
+*/
+
+/**
+ * Nav 3
+ *
+ * Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi vero culpa dolor quisquam aperiam eveniet, sed temporibus accusamus accusantium ad odio veritatis natus tenetur aliquam, distinctio iste minima exercitationem illo!
+ *
+ * @section
+ * @sectionof Navigation
+ *
+ * @newCat Name - Description
+ *
+ * @example
+ * <button class="btn">Button</button>
+ * <input type="submit" class="btn" value="Input"/>
+ * <a href="#" class="btn">Anchor</a>
+*/
+
+/**
+ * Nav 4
+ *
+ * Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi vero culpa dolor quisquam aperiam eveniet, sed temporibus accusamus accusantium ad odio veritatis natus tenetur aliquam, distinctio iste minima exercitationem illo!
+ *
+ * @section
+ * @sectionof Navigation
+ *
+ * @newCat Name - Description
+ *
+ * @example
+ * <button class="btn">Button</button>
+ * <input type="submit" class="btn" value="Input"/>
+ * <a href="#" class="btn">Anchor</a>
+*/

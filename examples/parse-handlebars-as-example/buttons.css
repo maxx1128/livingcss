@@ -3,6 +3,8 @@
  *
  * Buttons do lots of fun things! You click them! They take you places! Who doesn't love buttons?
  *
+ * People who hate puppies, that's who!
+ *
  * @section
  */
 
@@ -83,10 +85,39 @@
 }
 
 
+/**
+ * Typography
+ *
+ * All the text things that people read with eyes.
+ *
+ * @section
+ *
+ * @page Type
+ */
 
 
-
-
+/**
+ * Headers
+ *
+ * The Button `.btn` class can be applied to `<button>`, `<input>`, or `<a>` elements.
+ *
+ *
+ * At the top of pages and articles.
+ *
+ * @section
+ * @sectionof Typography
+ *
+ * @page Type
+ *
+ * @example
+ * <h1>Heading 1</h1>
+ * <h2>Heading 2</h2>
+ * <h3>Heading 3</h3>
+ * <h4>Heading 4</h4>
+ * <h5>Heading 5</h5>
+ * <h6>Heading 6</h6>
+ *
+ */
 h1, h2, h3, h4 {
   font-family: "Skolar Bold", "Segoe UI Bold", "Roboto Slab", "Droid Serif",
   AvenirNext-Bold, "Avenir Bold", Georgia,
@@ -122,11 +153,30 @@ h4, h5, h6 {
   margin: 0;
 }
 
+
+/**
+ * Paragraphs
+ *
+ *
+ * At the top of pages and articles.
+ *
+ * @section
+ * @sectionof Typography
+ *
+ * @page Type
+ *
+ * @example
+ * <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis porro iure repellat dicta hic, libero eaque! Earum incidunt vitae id at, harum, fugit officiis, animi, asperiores molestias voluptatem aperiam eius.</p>
+ *
+ */
+
 p {
   font-size: 1rem;
   line-height: 1.625rem;
   margin: 0 0 1.625rem 0;
 }
+
+
 
 a,
 a:visited {

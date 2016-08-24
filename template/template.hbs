@@ -78,7 +78,29 @@
       {{/if}}
     </header>
 
-    <div class="livingcss__container livingcss__content">
+    <div class="livingcss__container clearfix livingcss__content">
+
+      <nav class="livingcss__nav">
+        <div class="livingcss__nav-container">
+          <ul class="livingcss__nav-menu1">
+            {{#each sections}}
+              <li class="livingcss__parent">
+                <a class="livingcss__parent-link livingcss__nav-link" href="#{{id}}">{{name}}</a>
+              
+                {{#if children}}
+                  {{#each children}}
+                    <ul class="livingcss__child-links">
+                      <li>
+                        <a class="livingcss__nav-link livingcss__nav-link--child" href="#{{id}}">{{name}}</a>
+                      </li>
+                    </ul>
+                  {{/each}}
+                {{/if}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </nav>
 
       <main class="livingcss__main" role="main">
 
@@ -96,28 +118,6 @@
 
       </main>
 
-      <nav class="livingcss__nav">
-        <div class="livingcss__nav-container">
-          <ul>
-            {{#each sections}}
-              <li>
-                <a class="livingcss__nav-link" href="#{{id}}">{{name}}</a>
-              </li>
-
-              {{#if children}}
-                <ul>
-                  {{#each children}}
-                    <li>
-                      <a class="livingcss__nav-link" href="#{{id}}">{{name}}</a>
-                    </li>
-                  {{/each}}
-                </ul>
-              {{/if}}
-            {{/each}}
-          </ul>
-        </div>
-      </nav>
-
     </div>
 
     <footer class="livingcss__footer livingcss__inverse-text">
@@ -128,6 +128,7 @@
 
   <!-- prism -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/prism/1.4.1/themes/prism.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/prism/1.4.1/prism.js"></script>
   <script src="https://cdn.jsdelivr.net/prism/1.4.1/components/prism-markup.min.js"></script>
   <!-- /prism -->

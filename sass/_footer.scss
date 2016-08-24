@@ -1,19 +1,14 @@
-
-
 /*
  * FOOTER
  */
 .livingcss__footer {
-  background: #1976D2;
-  bottom: 0;
-  color: #727272;
-  left: 0;
-  padding: 1rem 0;
-  position: absolute;
-  right: 0;
+  padding: $base-spacing;
+  margin-top: $large-spacing;
+  
   text-align: right;
-}
+  color: $white-color;
+  
+  background: $base-color;
 
-.livingcss__footer a {
-  font-weight: bold;
+  a { font-weight: bold; }
 }
