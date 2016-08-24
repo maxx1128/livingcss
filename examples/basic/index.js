@@ -8,5 +8,13 @@ livingcss('buttons.css', '../../styleguide.html', {
 
     // register a Handlebars partial
     Handlebars.registerPartial('myPartial', '{{name}}');
-  }
+  },
+
+  sortOrder: [{
+    intro: []
+  }, {
+    buttons: []
+  }, {
+    navigation: []
+  }],
 });

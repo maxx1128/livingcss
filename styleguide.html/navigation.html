@@ -302,9 +302,18 @@
 
     <header class="livingcss__header">
       <div class="livingcss__header-title-container livingcss__inverse-text">
-        <h1 class="livingcss__container livingcss__header-title"><a href="">My Awesome Style Guide</a></h1>
+        <h1 class="livingcss__container livingcss__header-title"><a href="intro.html">My Awesome Style Guide</a></h1>
       </div>
 
+      <div class="livingcss__main-nav-container">
+        <nav class="livingcss__container livingcss__main-nav">
+          <a class="livingcss__nav-link livingcss__nav-link--main " href="intro.html">Intro</a>
+          <a class="livingcss__nav-link livingcss__nav-link--main " href="buttons.html">Buttons</a>
+          <a class="livingcss__nav-link livingcss__nav-link--main livingcss__nav-link--active" href="navigation.html">Navigation</a>
+        </nav>
+      </div>
+
+      <button class="livingcss__menu livingcss__inverse-text">☰ Menu</button>
     </header>
 
     <div class="livingcss__container clearfix livingcss__content">
@@ -312,15 +321,6 @@
       <nav class="livingcss__nav">
         <div class="livingcss__nav-container">
           <ul class="livingcss__nav-menu1">
-              <li class="livingcss__parent">
-                <a class="livingcss__parent-link livingcss__nav-link" href="#buttons">Buttons</a>
-              
-                    <ul class="livingcss__child-links">
-                      <li>
-                        <a class="livingcss__nav-link livingcss__nav-link--child" href="#buttons-primary-button">Primary Button</a>
-                      </li>
-                    </ul>
-              </li>
               <li class="livingcss__parent">
                 <a class="livingcss__parent-link livingcss__nav-link" href="#navigation">Navigation</a>
               
@@ -351,35 +351,6 @@
 
       <main class="livingcss__main" role="main">
 
-        <article class="livingcss__article" id="buttons">
-          <h1 class="livingcss__article-title">Buttons</h1><div class="livingcss__section-description">
-  <p>The Button <code>.btn</code> class can be applied to <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, or <code>&lt;a&gt;</code> elements. Extra stuff has now been added here!</p>
-
-<livingcss-example><button class="btn">Button</button>
-<input type="submit" class="btn" value="Input"/>
-<a href="#" class="btn">Anchor</a></livingcss-example>
-
-<div class="livingcss__section-markup">
-  <pre class="livingcss__section-code"><code class="language-markup">&lt;button class&#x3D;&quot;btn&quot;&gt;Button&lt;/button&gt;
-&lt;input type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn&quot; value&#x3D;&quot;Input&quot;/&gt;
-&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;btn&quot;&gt;Anchor&lt;/a&gt;</code></pre>
-</div>
-
-<section class="livingcss__section" id="buttons-primary-button">
-  <h2>Primary Button</h2><div class="livingcss__section-description">
-  <p>A primary button</p>
-
-<livingcss-example><button class="btn primary">Button</button>
-<input type="submit" class="btn primary" value="Input"/>
-<a href="#" class="btn primary">Anchor</a></livingcss-example>
-
-<div class="livingcss__section-markup">
-  <pre class="livingcss__section-code"><code class="language-markup">&lt;button class&#x3D;&quot;btn primary&quot;&gt;Button&lt;/button&gt;
-&lt;input type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn primary&quot; value&#x3D;&quot;Input&quot;/&gt;
-&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;btn primary&quot;&gt;Anchor&lt;/a&gt;</code></pre>
-</div>
-
-</section>        </article>
         <article class="livingcss__article" id="navigation">
           <h1 class="livingcss__article-title">Navigation</h1><div class="livingcss__section-description">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi vero culpa dolor quisquam aperiam eveniet, sed temporibus accusamus accusantium ad odio veritatis natus tenetur aliquam, distinctio iste minima exercitationem illo!</p>
