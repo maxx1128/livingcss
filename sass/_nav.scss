@@ -44,6 +44,8 @@
     font-size: 0.875rem;
     line-height: 1rem
   }
+
+  &[href="index.html"] { display: none; }
 }
 
 .livingcss__nav--fixed .livingcss__nav-container {

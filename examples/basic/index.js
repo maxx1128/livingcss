@@ -11,7 +11,7 @@ livingcss('buttons.css', '../../styleguide.html', {
   },
 
   sortOrder: [{
-    intro: []
+    index: []
   }, {
     buttons: []
   }, {
