@@ -1,13 +1,14 @@
-$mobile-width: 992px; // Use with a max-width
-
 $medium-width: 720px;
 $large-width: 993px;
 $desktop-width: 1200px;
 
-$base-color: #00F;
-$light-color: #99F;
+$mobile-width: $medium-width; // Use with a max-width
+
+$base-color: #00f;
+$light-color: #99f;
 $dark-color: #009;
-$white-color: #FFF;
+$white-color: #fff;
+$gray-color: #ddd;
 $black-color: #000;
 
 $base-spacing: 1rem;

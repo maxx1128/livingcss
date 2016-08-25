@@ -6,20 +6,53 @@
 }
 
 .livingcss__header-title-container {
-  background: $base-color;
+  @include clearfix();
   padding: $base-spacing;
+
+  background: $base-color;
 }
 
 .livingcss__header-title {
+  padding-right: 4em;
+
   font-size: 1.625rem;
   line-height: 1.625rem;
 
   a { color: $white-color !important; }
+
+  @include larger-than($mobile-width) {
+    width: 33%;
+    float: left;
+
+    padding-right: 0em;
+  }
 }
+
+.livingcss__header-logo {
+  width: 100%;
+  padding-right: 6em;
+  box-sizing: border-box;
+
+  img { max-width: 100%; }
+
+  @include larger-than($mobile-width) {
+    width: 33%;
+    float: right;
+
+    padding-right: 0;
+
+    text-align: right;
+  }
+}
+
+
 
 .livingcss__main-nav-container {
   padding: $small-spacing $base-spacing;
-  border-bottom: 1px solid $dark-color;
+
+  @include larger-than($mobile-width) {
+    border-bottom: 1px solid $dark-color;
+  }
 }
 
 

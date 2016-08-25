@@ -20,3 +20,12 @@
   &:focus,
   &:active { @content; }
 }
+
+// For adding a clearfix
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
