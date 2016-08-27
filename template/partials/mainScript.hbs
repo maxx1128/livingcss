@@ -61,7 +61,10 @@
 
   // move active link and affix sidebar
   window.addEventListener('scroll', function() {
-    var y = window.scrollY;
+    var height = "innerHeight" in window 
+               ? window.innerHeight
+               : document.documentElement.offsetHeight; 
+    var y = window.scrollY + (height / 2);
 
     // fix the sidebar nav
     if (nav.getBoundingClientRect().top <= 0 && y > 50) {
@@ -79,7 +82,8 @@
     // look for which section is being viewed
     else {
       for (var i = 0; i < sections.length; i++) {
-        // console.log(sections);
+        // console.log(sectionPositions[i]);
+        
         if (y >= sectionPositions[i] &&
             (sectionPositions[i+1] ? y < sectionPositions[i+1] : true)) {
           var id = sections[i].getAttribute('id');
