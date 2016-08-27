@@ -34,14 +34,14 @@
 
   li {
     &:nth-of-type(even) a {
-      background-color: $gray-color;
+      background-color: $color-gray;
     }
   }
 
   li[data-nav-id="index.html"] { display: none; }
 
   a {
-    padding: $base-spacing 0;
+    padding: $spacing-base 0;
 
     text-align: center;
     text-decoration: none;
@@ -57,12 +57,12 @@
 .livingcss__nav-menu2 {
   list-style-type: none;
 
-  li { border-left: 3px solid $base-color; }
+  li { border-left: 3px solid $color-medium; }
 }
 
 .livingcss__nav-menu1 { padding-left: 0; }
 
-.livingcss__nav-menu2 { padding-left: $base-spacing; }
+.livingcss__nav-menu2 { padding-left: $spacing-base; }
 
 .livingcss__nav-link {}
 

@@ -1,9 +1,9 @@
 var livingcss = require('../../index.js');
 
-// livingcss('buttons.css', '../../styleguide');
-
 livingcss('buttons.css', '../../styleguide.html', {
   preprocess: function(context, template, Handlebars) {
+    context.globalStylesheets = ['../examples/basic/buttons.css'];
+
     context.title = 'My Awesome Style Guide';
     context.logo_img = 'http://placehold.it/150x50';
 

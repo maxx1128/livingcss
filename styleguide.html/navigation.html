@@ -72,7 +72,7 @@
         padding-left: 0;
         list-style-type: none; }
       .livingcss__off-canvas-menu li:nth-of-type(even) a {
-        background-color: #ddd; }
+        background-color: #b4acbd; }
       .livingcss__off-canvas-menu li[data-nav-id="index.html"] {
         display: none; }
       .livingcss__off-canvas-menu a {
@@ -88,7 +88,7 @@
       list-style-type: none; }
       .livingcss__nav-menu1 li,
       .livingcss__nav-menu2 li {
-        border-left: 3px solid #00f; }
+        border-left: 3px solid #5283c5; }
     
     .livingcss__nav-menu1 {
       padding-left: 0; }
@@ -199,7 +199,7 @@
     
     .livingcss__header-title-container {
       padding: 1rem;
-      background: #00f; }
+      background: #5283c5; }
       .livingcss__header-title-container::after {
         clear: both;
         content: "";
@@ -210,7 +210,7 @@
       font-size: 1.625rem;
       line-height: 1.625rem; }
       .livingcss__header-title a {
-        color: #fff !important; }
+        color: #efefef !important; }
       @media (min-width: 720px) {
         .livingcss__header-title {
           width: 33%;
@@ -234,7 +234,7 @@
       padding: 0.5rem 1rem; }
       @media (min-width: 720px) {
         .livingcss__main-nav-container {
-          border-bottom: 1px solid #009; } }
+          border-bottom: 1px solid #183973; } }
     
     .livingcss__nav-link {
       display: block;
@@ -246,8 +246,8 @@
     a.livingcss__nav-link--active {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      background: #99f !important;
-      color: #fff !important;
+      background: #8ba4e6 !important;
+      color: #efefef !important;
       text-decoration: none; }
     
     .livingcss__menu {
@@ -269,8 +269,8 @@
       padding: 1rem;
       margin-top: 2rem;
       text-align: right;
-      color: #fff;
-      background: #00f; }
+      color: #efefef;
+      background: #5283c5; }
       .livingcss__footer a {
         font-weight: bold; }
     
@@ -296,7 +296,7 @@
         padding-left: 0;
         list-style-type: none; }
       .livingcss__off-canvas-menu li:nth-of-type(even) a {
-        background-color: #ddd; }
+        background-color: #b4acbd; }
       .livingcss__off-canvas-menu li[data-nav-id="index.html"] {
         display: none; }
       .livingcss__off-canvas-menu a {
@@ -312,7 +312,7 @@
       list-style-type: none; }
       .livingcss__nav-menu1 li,
       .livingcss__nav-menu2 li {
-        border-left: 3px solid #00f; }
+        border-left: 3px solid #5283c5; }
     
     .livingcss__nav-menu1 {
       padding-left: 0; }
@@ -347,6 +347,7 @@
   <!-- /critical path css -->
 
   <!-- user styles -->
+  <link rel="stylesheet" href="../examples/basic/buttons.css">
   <!-- /user styles -->
 
   <script src="https://cdn.jsdelivr.net/webcomponentsjs/0.7.21/webcomponents-lite.min.js"></script>
@@ -622,7 +623,10 @@
   
     // move active link and affix sidebar
     window.addEventListener('scroll', function() {
-      var y = window.scrollY;
+      var height = "innerHeight" in window 
+                 ? window.innerHeight
+                 : document.documentElement.offsetHeight; 
+      var y = window.scrollY + (height / 2);
   
       // fix the sidebar nav
       if (nav.getBoundingClientRect().top <= 0 && y > 50) {
@@ -640,7 +644,8 @@
       // look for which section is being viewed
       else {
         for (var i = 0; i < sections.length; i++) {
-          // console.log(sections);
+          // console.log(sectionPositions[i]);
+          
           if (y >= sectionPositions[i] &&
               (sectionPositions[i+1] ? y < sectionPositions[i+1] : true)) {
             var id = sections[i].getAttribute('id');

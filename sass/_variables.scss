@@ -4,13 +4,17 @@ $desktop-width: 1200px;
 
 $mobile-width: $medium-width; // Use with a max-width
 
-$base-color: #00f;
-$light-color: #99f;
-$dark-color: #009;
-$white-color: #fff;
-$gray-color: #ddd;
-$black-color: #000;
 
-$base-spacing: 1rem;
-$large-spacing: 2rem;
-$small-spacing: 0.5rem;
+$color-blank: #efefef;
+$color-gray: #b4acbd;
+$color-black: #111;
+
+$color-light: #8ba4e6;
+$color-medium: #5283c5;
+$color-dark: #183973;
+
+
+
+$spacing-base: 1rem;
+$spacing-large: 2rem;
+$spacing-small: 0.5rem;

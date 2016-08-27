@@ -7,9 +7,9 @@
 
 .livingcss__header-title-container {
   @include clearfix();
-  padding: $base-spacing;
+  padding: $spacing-base;
 
-  background: $base-color;
+  background: $color-medium;
 }
 
 .livingcss__header-title {
@@ -18,7 +18,7 @@
   font-size: 1.625rem;
   line-height: 1.625rem;
 
-  a { color: $white-color !important; }
+  a { color: $color-blank !important; }
 
   @include larger-than($mobile-width) {
     width: 33%;
@@ -48,10 +48,10 @@
 
 
 .livingcss__main-nav-container {
-  padding: $small-spacing $base-spacing;
+  padding: $spacing-small $spacing-base;
 
   @include larger-than($mobile-width) {
-    border-bottom: 1px solid $dark-color;
+    border-bottom: 1px solid $color-dark;
   }
 }
 
@@ -67,8 +67,8 @@ a.livingcss__nav-link:focus,
 a.livingcss__nav-link--active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: $light-color !important;
-  color: $white-color !important;
+  background: $color-light !important;
+  color: $color-blank !important;
   text-decoration: none;
 }
 
