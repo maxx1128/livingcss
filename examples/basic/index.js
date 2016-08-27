@@ -18,6 +18,6 @@ livingcss('buttons.css', '../../styleguide.html', {
   }, {
     buttons: []
   }, {
-    navigation: []
+    navigation: ['Navigation', 'Navigation Alt']
   }],
 });

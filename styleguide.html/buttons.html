@@ -50,76 +50,6 @@
       display: block; }
     
     /* close commented backslash hack */
-    @media (max-width: 720px) {
-      .livingcss__main-nav {
-        display: none; } }
-    
-    @media (max-width: 720px) {
-      .livingcss__main-nav--open .livingcss__main-nav {
-        right: 0;
-        box-shadow: -2px 0px 6px rgba(0, 0, 0, 0.2); } }
-    
-    .livingcss__off-canvas-menu {
-      position: absolute;
-      top: 0;
-      right: -13rem;
-      width: 13rem; }
-      @media (max-width: 720px) {
-        .livingcss__main-nav--open .livingcss__off-canvas-menu {
-          right: 0; } }
-      .livingcss__off-canvas-menu ul {
-        margin-left: 0;
-        padding-left: 0;
-        list-style-type: none; }
-      .livingcss__off-canvas-menu li:nth-of-type(even) a {
-        background-color: #b4acbd; }
-      .livingcss__off-canvas-menu li[data-nav-id="index.html"] {
-        display: none; }
-      .livingcss__off-canvas-menu a {
-        padding: 1rem 0;
-        text-align: center;
-        text-decoration: none; }
-    
-    .livingcss__off-canvas-menu-title {
-      text-align: center; }
-    
-    .livingcss__nav-menu1,
-    .livingcss__nav-menu2 {
-      list-style-type: none; }
-      .livingcss__nav-menu1 li,
-      .livingcss__nav-menu2 li {
-        border-left: 3px solid #5283c5; }
-    
-    .livingcss__nav-menu1 {
-      padding-left: 0; }
-    
-    .livingcss__nav-menu2 {
-      padding-left: 1rem; }
-    
-    @media (min-width: 720px) {
-      .livingcss__nav-link--main {
-        display: inline-block;
-        font-size: 0.875rem;
-        line-height: 1rem; } }
-    
-    .livingcss__nav-link--main[href="index.html"] {
-      display: none; }
-    
-    @media (min-width: 720px) {
-      .livingcss__nav--fixed .livingcss__nav-container {
-        position: fixed;
-        top: 0;
-        width: 13rem; } }
-    
-    @media (min-width: 720px) {
-      .livingcss__menu {
-        display: none; } }
-    
-    .livingcss__child-links {
-      display: none; }
-      .livingcss__parent-link--expanded .livingcss__child-links {
-        display: block; }
-    
     /*
      * GRID
      */
@@ -129,33 +59,24 @@
       transition: right 0.2s;
       right: 0; }
     
-    .livingcss__nav,
     .livingcss__main {
       box-sizing: border-box;
       padding: 0.5rem 1rem;
       margin-top: 0.5rem; }
     
-    @media (max-width: 720px) {
-      .livingcss__nav {
-        display: none; } }
-    
     @media (min-width: 720px) {
       .livingcss__main {
         width: 62.5%;
         float: right; }
-      .livingcss__nav {
+      .livingcss__sidenav {
         width: 32.5%;
         float: left; } }
     
     @media (min-width: 993px) {
       .livingcss__main {
         width: 72.5%; }
-      .livingcss__nav {
+      .livingcss__sidenav {
         width: 22.5%; } }
-    
-    @media (max-width: 720px) {
-      .livingcss__main-nav--open .livingcss__wrapper {
-        right: 13rem; } }
     
     /*
      * MAIN
@@ -192,8 +113,11 @@
       line-height: 1.625rem; }
     
     /*
-     * HEADER
-     */
+      HEADER
+    
+      The top banner with the title, logo, and links to different sections
+    
+    */
     .livingcss__header {
       position: relative; }
     
@@ -230,26 +154,6 @@
           padding-right: 0;
           text-align: right; } }
     
-    .livingcss__main-nav-container {
-      padding: 0.5rem 1rem; }
-      @media (min-width: 720px) {
-        .livingcss__main-nav-container {
-          border-bottom: 1px solid #183973; } }
-    
-    .livingcss__nav-link {
-      display: block;
-      padding: 0.40625rem 0.8125rem; }
-    
-    a.livingcss__nav-link:hover,
-    a.livingcss__nav-link:active,
-    a.livingcss__nav-link:focus,
-    a.livingcss__nav-link--active {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      background: #8ba4e6 !important;
-      color: #efefef !important;
-      text-decoration: none; }
-    
     .livingcss__menu {
       position: absolute;
       right: 1.625rem;
@@ -275,13 +179,81 @@
         font-weight: bold; }
     
     @media (max-width: 720px) {
-      .livingcss__main-nav {
+      .livingcss__navbar {
         display: none; } }
     
-    @media (max-width: 720px) {
-      .livingcss__main-nav--open .livingcss__main-nav {
-        right: 0;
-        box-shadow: -2px 0px 6px rgba(0, 0, 0, 0.2); } }
+    .livingcss__navbar-container {
+      border-bottom: 1px solid #183973; }
+    
+    .livingcss__navbar-link {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      text-decoration: none; }
+      .livingcss__navbar-link[href="index.html"] {
+        display: none; }
+    
+    .livingcss__navbar-link:hover,
+    .livingcss__navbar-link:active,
+    .livingcss__navbar-link:focus,
+    .livingcss__navbar-link--active {
+      color: #efefef;
+      background-color: #183973; }
+    
+    .livingcss__sidenav {
+      display: none; }
+      @media (min-width: 720px) {
+        .livingcss__sidenav {
+          display: block; } }
+    
+    .livingcss__sidenav-container {
+      box-sizing: border-box;
+      padding-left: 1rem; }
+    
+    .livingcss__sidenav-menu1 {
+      padding-left: 0; }
+    
+    .livingcss__sidenav-menu2 {
+      padding-left: 1rem; }
+    
+    .livingcss__sidenav-link {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: #111;
+      text-decoration: none; }
+    
+    .livingcss__sidenav-link:hover,
+    .livingcss__sidenav-link:active,
+    .livingcss__sidenav-link:focus,
+    .livingcss__sidenav-link--active {
+      font-weight: 700;
+      text-decoration: none;
+      border-left: 3px solid #8ba4e6; }
+    
+    .livingcss__sidenav-container ul {
+      list-style-type: none; }
+    
+    @media (min-width: 720px) {
+      .livingcss__sidenav--fixed .livingcss__sidenav-container {
+        position: fixed;
+        top: 0;
+        width: 13rem; } }
+    
+    .livingcss__sidenav-child-links {
+      display: none; }
+      .livingcss__sidenav-parent-link--expanded .livingcss__sidenav-child-links {
+        display: block; }
+    
+    /* 
+    
+      Off Canvas Menu
+    
+      The side menu for mobile screens
+    
+    */
+    @media (min-width: 720px) {
+      .livingcss__menu {
+        display: none; } }
     
     .livingcss__off-canvas-menu {
       position: absolute;
@@ -289,60 +261,30 @@
       right: -13rem;
       width: 13rem; }
       @media (max-width: 720px) {
-        .livingcss__main-nav--open .livingcss__off-canvas-menu {
+        .livingcss__navbar--open .livingcss__off-canvas-menu {
           right: 0; } }
       .livingcss__off-canvas-menu ul {
         margin-left: 0;
         padding-left: 0;
         list-style-type: none; }
-      .livingcss__off-canvas-menu li:nth-of-type(even) a {
-        background-color: #b4acbd; }
+      .livingcss__off-canvas-menu li:last-of-type a {
+        border-bottom: 1px solid #5283c5; }
       .livingcss__off-canvas-menu li[data-nav-id="index.html"] {
         display: none; }
-      .livingcss__off-canvas-menu a {
-        padding: 1rem 0;
-        text-align: center;
-        text-decoration: none; }
+    
+    .livingcss__off-canvas-link--main {
+      display: block;
+      padding: 1rem 0;
+      border-top: 1px solid #5283c5;
+      color: #111;
+      text-align: center;
+      text-decoration: none; }
+    
+    .livingcss__off-canvas-link--active {
+      font-weight: 700; }
     
     .livingcss__off-canvas-menu-title {
       text-align: center; }
-    
-    .livingcss__nav-menu1,
-    .livingcss__nav-menu2 {
-      list-style-type: none; }
-      .livingcss__nav-menu1 li,
-      .livingcss__nav-menu2 li {
-        border-left: 3px solid #5283c5; }
-    
-    .livingcss__nav-menu1 {
-      padding-left: 0; }
-    
-    .livingcss__nav-menu2 {
-      padding-left: 1rem; }
-    
-    @media (min-width: 720px) {
-      .livingcss__nav-link--main {
-        display: inline-block;
-        font-size: 0.875rem;
-        line-height: 1rem; } }
-    
-    .livingcss__nav-link--main[href="index.html"] {
-      display: none; }
-    
-    @media (min-width: 720px) {
-      .livingcss__nav--fixed .livingcss__nav-container {
-        position: fixed;
-        top: 0;
-        width: 13rem; } }
-    
-    @media (min-width: 720px) {
-      .livingcss__menu {
-        display: none; } }
-    
-    .livingcss__child-links {
-      display: none; }
-      .livingcss__parent-link--expanded .livingcss__child-links {
-        display: block; }
   </style>
   <!-- /critical path css -->
 
@@ -391,6 +333,7 @@
   </script>
   <!-- /webcomponent -->
 
+  <!-- The off-canvas menu for mobile -->
     <div class="livingcss__off-canvas-menu">
       <h4 class="livingcss__off-canvas-menu-title">
         Navigation  
@@ -398,22 +341,29 @@
 
       <ul>
           <li data-nav-id="index.html">
-            <a class="livingcss__nav-link livingcss__nav-link--main " href="index.html">index</a>
+            <a class="livingcss__off-canvas-link livingcss__off-canvas-link--main " href="index.html">
+              index
+            </a>
           </li>
           <li data-nav-id="buttons.html">
-            <a class="livingcss__nav-link livingcss__nav-link--main livingcss__nav-link--active" href="buttons.html">Buttons</a>
+            <a class="livingcss__off-canvas-link livingcss__off-canvas-link--main livingcss__off-canvas-link--active" href="buttons.html">
+              Buttons
+            </a>
           </li>
           <li data-nav-id="navigation.html">
-            <a class="livingcss__nav-link livingcss__nav-link--main " href="navigation.html">Navigation</a>
+            <a class="livingcss__off-canvas-link livingcss__off-canvas-link--main " href="navigation.html">
+              Navigation
+            </a>
           </li>
       </ul>
     </div>
 
-  <div class="livingcss__wrapper">
 
+  <div class="livingcss__wrapper">
+    <!-- The header with title, logo, and navbar -->
     <header class="livingcss__header">
       <div class="livingcss__header-title-container livingcss__inverse-text">
-        <h1 class="livingcss__container livingcss__header-title">
+        <h1 class="livingcss__header-title">
           <a href="index.html">My Awesome Style Guide</a>
         </h1>
 
@@ -422,28 +372,34 @@
         </div>
       </div>
 
-      <div class="livingcss__main-nav-container">
-        <nav class="livingcss__container livingcss__main-nav">
-          <a class="livingcss__nav-link livingcss__nav-link--main " href="index.html">index</a>
-          <a class="livingcss__nav-link livingcss__nav-link--main livingcss__nav-link--active" href="buttons.html">Buttons</a>
-          <a class="livingcss__nav-link livingcss__nav-link--main " href="navigation.html">Navigation</a>
+      <div class="livingcss__navbar-container">
+        <nav class="livingcss__navbar">
+          <a class="livingcss__navbar-link " href="index.html">
+            index
+          </a>
+          <a class="livingcss__navbar-link livingcss__navbar-link--active" href="buttons.html">
+            Buttons
+          </a>
+          <a class="livingcss__navbar-link " href="navigation.html">
+            Navigation
+          </a>
         </nav>
       </div>
 
       <button class="livingcss__menu livingcss__inverse-text">Menu</button>
     </header>
 
-    <div class="livingcss__container clearfix livingcss__content">
+    <div class="clearfix livingcss__content">
 
-      <nav class="livingcss__nav">
-        <div class="livingcss__nav-container">
-          <ul class="livingcss__nav-menu1">
-              <li class="livingcss__parent">
-                <a class="livingcss__parent-link livingcss__nav-link" href="#buttons">Buttons</a>
+      <nav class="livingcss__sidenav">
+        <div class="livingcss__sidenav-container">
+          <ul class="livingcss__sidenav-menu1">
+              <li class="livingcss__sidenav-parent">
+                <a class="livingcss__sidenav-parent-link livingcss__sidenav-link" href="#buttons">Buttons</a>
               
-                    <ul class="livingcss__child-links">
+                    <ul class="livingcss__sidenav-child-links">
                       <li>
-                        <a class="livingcss__nav-link livingcss__nav-link--child" href="#buttons-primary-button">Primary Button</a>
+                        <a class="livingcss__sidenav-link livingcss__sidenav-link--child" href="#buttons-primary-button">Primary Button</a>
                       </li>
                     </ul>
               </li>
@@ -488,7 +444,7 @@
     </div>
 
     <footer class="livingcss__footer livingcss__inverse-text">
-      <div class="livingcss__container">Style Guide generated with <a href="https://github.com/straker/livingcss">LivingCSS</a>.</div>
+      <div class=">Style Guide generated with <a href="https://github.com/straker/livingcss">LivingCSS</a>.</div>
     </footer>
 
   </div>
@@ -519,16 +475,16 @@
           activeLink.classList.remove('livingcss__nav-link--active');
         }*/
   
-        $('.livingcss__nav-link').removeClass('livingcss__nav-link--active');
+        $('.livingcss__sidenav-link').removeClass('livingcss__sidenav-link--active');
   
-        link.classList.add('livingcss__nav-link--active');
+        link.classList.add('livingcss__sidenav-link--active');
   
-        $('.livingcss__parent').removeClass('livingcss__parent-link--expanded');
+        $('.livingcss__sidenav-parent').removeClass('livingcss__sidenav-parent-link--expanded');
   
-        $(full_item).closest('.livingcss__parent').addClass('livingcss__parent-link--expanded');
+        $(full_item).closest('.livingcss__sidenav-parent').addClass('livingcss__sidenav-parent-link--expanded');
   
         if (child) {
-          $(full_item).closest('.livingcss__parent').find('.livingcss__parent-link').addClass('livingcss__nav-link--active');
+          $(full_item).closest('.livingcss__sidenav-parent').find('.livingcss__sidenav-parent-link').addClass('livingcss__sidenav-link--active');
   
           // $(full_item).closest('.livingcss__parent').addClass('livingcss__parent-link--expanded');
         }
@@ -540,12 +496,12 @@
     }
   
     // set active link when
-    var nav = document.querySelector('.livingcss__nav');
+    var nav = document.querySelector('.livingcss__sidenav');
     var sections = $('article.livingcss__article, section.livingcss__section') // document.querySelectorAll('article.livingcss__article');
     var sectionPositions = [];
   
     // set the current link based on the hash
-    var currentLink = document.querySelector('.livingcss__nav-link[href="' + window.location.hash + '"]');
+    var currentLink = document.querySelector('.livingcss__navbar-link[href="' + window.location.hash + '"]');
     setActiveLink(currentLink);
   
     // save section positions for scrolling
@@ -569,37 +525,29 @@
       var height = "innerHeight" in window 
                  ? window.innerHeight
                  : document.documentElement.offsetHeight; 
-      var y = window.scrollY + (height / 2);
+      var y = window.scrollY + (height / 1.5);
   
       // fix the sidebar nav
       if (nav.getBoundingClientRect().top <= 0 && y > 50) {
-        nav.classList.add('livingcss__nav--fixed');
+        nav.classList.add('livingcss__sidenav--fixed');
       }
       else {
-        nav.classList.remove('livingcss__nav--fixed');
+        nav.classList.remove('livingcss__sidenav--fixed');
       }
   
-      // window is scrolled to the very bottom so set last section as active
-      if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
-        var activeSection = document.querySelector('.livingcss__nav .livingcss__nav-link:last-child');
-        setActiveLink(activeSection);
-      }
-      // look for which section is being viewed
-      else {
-        for (var i = 0; i < sections.length; i++) {
-          // console.log(sectionPositions[i]);
-          
-          if (y >= sectionPositions[i] &&
-              (sectionPositions[i+1] ? y < sectionPositions[i+1] : true)) {
-            var id = sections[i].getAttribute('id');
-            var activeSection = document.querySelector('.livingcss__nav .livingcss__nav-link[href="#'+id+'"]');
-            var childSection = hasClass(activeSection, 'livingcss__nav-link--child');
+      for (var i = 0; i < sections.length; i++) {
+        // console.log(sectionPositions[i]);
+        
+        if (y >= sectionPositions[i] &&
+            (sectionPositions[i+1] ? y < sectionPositions[i+1] : true)) {
+          var id = sections[i].getAttribute('id');
+          var activeSection = document.querySelector('.livingcss__sidenav .livingcss__sidenav-link[href="#'+id+'"]');
+          var childSection = hasClass(activeSection, 'livingcss__sidenav-link--child');
   
-            var full_activeSection = $('.livingcss__nav .livingcss__nav-link[href="#'+id+'"]');
+          var full_activeSection = $('.livingcss__sidenav .livingcss__sidenav-link[href="#'+id+'"]');
   
-            setActiveLink(activeSection, full_activeSection, childSection);
+          setActiveLink(activeSection, full_activeSection, childSection);
   
-          }
         }
       }
     });
@@ -608,7 +556,7 @@
     var menu = document.querySelector('.livingcss__menu');
     if (menu) {
       menu.addEventListener('click', function(e) {
-        document.body.classList.toggle('livingcss__main-nav--open')
+        document.body.classList.toggle('livingcss__navbar--open')
       });
     }
   })(window, document);

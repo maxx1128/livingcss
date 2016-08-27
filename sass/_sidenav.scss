@@ -1,0 +1,57 @@
+.livingcss__sidenav {
+
+  display: none;
+
+  @include larger-than($mobile-width) { display: block; }
+}
+
+.livingcss__sidenav-container {
+  box-sizing: border-box;
+
+  padding-left: $spacing-base;
+}
+
+
+.livingcss__sidenav-menu1 { padding-left: 0; }
+
+.livingcss__sidenav-menu2 { padding-left: $spacing-base; }
+
+.livingcss__sidenav-link {
+  display: block;
+  
+  padding: $spacing-small $spacing-base;
+  
+  color: $color-black;
+  text-decoration: none;
+}
+
+.livingcss__sidenav-link:hover,
+.livingcss__sidenav-link:active,
+.livingcss__sidenav-link:focus,
+.livingcss__sidenav-link--active {
+  font-weight: 700;
+  text-decoration: none;
+
+  border-left: 3px solid $color-light;
+}
+
+.livingcss__sidenav-container {
+
+  ul { list-style-type: none; }
+}
+
+.livingcss__sidenav--fixed .livingcss__sidenav-container {
+  @include larger-than($medium-width) {
+    position: fixed;
+    top: 0;
+    width: 13rem;
+  }
+}
+
+// When a parent category has a child element in view, this makes sure the parent category is expanded
+.livingcss__sidenav-child-links {
+
+  display: none;
+
+  .livingcss__sidenav-parent-link--expanded & { display: block; }
+}

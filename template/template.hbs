@@ -58,6 +58,7 @@
   </script>
   <!-- /webcomponent -->
 
+  <!-- The off-canvas menu for mobile -->
   {{#if navbar}}
     <div class="livingcss__off-canvas-menu">
       <h4 class="livingcss__off-canvas-menu-title">
@@ -67,18 +68,21 @@
       <ul>
         {{#each navbar}}
           <li data-nav-id="{{url}}">
-            <a class="livingcss__nav-link livingcss__nav-link--main {{#if selected}}livingcss__nav-link--active{{/if}}" href="{{url}}">{{name}}</a>
+            <a class="livingcss__off-canvas-link livingcss__off-canvas-link--main {{#if selected}}livingcss__off-canvas-link--active{{/if}}" href="{{url}}">
+              {{name}}
+            </a>
           </li>
         {{/each}}
       </ul>
     </div>
   {{/if}}
 
-  <div class="livingcss__wrapper">
 
+  <div class="livingcss__wrapper">
+    <!-- The header with title, logo, and navbar -->
     <header class="livingcss__header">
       <div class="livingcss__header-title-container livingcss__inverse-text">
-        <h1 class="livingcss__container livingcss__header-title">
+        <h1 class="livingcss__header-title">
           <a href="{{navbar.0.url}}">{{title}}</a>
         </h1>
 
@@ -88,10 +92,12 @@
       </div>
 
       {{#if navbar}}
-      <div class="livingcss__main-nav-container">
-        <nav class="livingcss__container livingcss__main-nav">
+      <div class="livingcss__navbar-container">
+        <nav class="livingcss__navbar">
         {{#each navbar}}
-          <a class="livingcss__nav-link livingcss__nav-link--main {{#if selected}}livingcss__nav-link--active{{/if}}" href="{{url}}">{{name}}</a>
+          <a class="livingcss__navbar-link {{#if selected}}livingcss__navbar-link--active{{/if}}" href="{{url}}">
+            {{name}}
+          </a>
         {{/each}}
         </nav>
       </div>
@@ -100,20 +106,20 @@
       {{/if}}
     </header>
 
-    <div class="livingcss__container clearfix livingcss__content">
+    <div class="clearfix livingcss__content">
 
-      <nav class="livingcss__nav">
-        <div class="livingcss__nav-container">
-          <ul class="livingcss__nav-menu1">
+      <nav class="livingcss__sidenav">
+        <div class="livingcss__sidenav-container">
+          <ul class="livingcss__sidenav-menu1">
             {{#each sections}}
-              <li class="livingcss__parent">
-                <a class="livingcss__parent-link livingcss__nav-link" href="#{{id}}">{{name}}</a>
+              <li class="livingcss__sidenav-parent">
+                <a class="livingcss__sidenav-parent-link livingcss__sidenav-link" href="#{{id}}">{{name}}</a>
               
                 {{#if children}}
                   {{#each children}}
-                    <ul class="livingcss__child-links">
+                    <ul class="livingcss__sidenav-child-links">
                       <li>
-                        <a class="livingcss__nav-link livingcss__nav-link--child" href="#{{id}}">{{name}}</a>
+                        <a class="livingcss__sidenav-link livingcss__sidenav-link--child" href="#{{id}}">{{name}}</a>
                       </li>
                     </ul>
                   {{/each}}
@@ -143,7 +149,7 @@
     </div>
 
     <footer class="livingcss__footer livingcss__inverse-text">
-      <div class="livingcss__container">{{{footerHTML}}}</div>
+      <div class=">{{{footerHTML}}}</div>
     </footer>
 
   </div>

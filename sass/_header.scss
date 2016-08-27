@@ -1,6 +1,11 @@
 /*
- * HEADER
- */
+  HEADER
+
+  The top banner with the title, logo, and links to different sections
+
+*/
+
+
 .livingcss__header {
   position: relative;
 }
@@ -45,32 +50,6 @@
   }
 }
 
-
-
-.livingcss__main-nav-container {
-  padding: $spacing-small $spacing-base;
-
-  @include larger-than($mobile-width) {
-    border-bottom: 1px solid $color-dark;
-  }
-}
-
-
-.livingcss__nav-link {
-  display: block;
-  padding: 0.40625rem 0.8125rem;
-}
-
-a.livingcss__nav-link:hover,
-a.livingcss__nav-link:active,
-a.livingcss__nav-link:focus,
-a.livingcss__nav-link--active {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: $color-light !important;
-  color: $color-blank !important;
-  text-decoration: none;
-}
 
 .livingcss__menu {
   position: absolute;

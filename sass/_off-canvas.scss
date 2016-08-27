@@ -1,0 +1,61 @@
+/* 
+
+  Off Canvas Menu
+
+  The side menu for mobile screens
+
+*/
+
+
+.livingcss__menu {
+
+  @include larger-than($medium-width) {
+    display: none;
+  }
+}
+
+
+.livingcss__off-canvas-menu {
+  position: absolute;
+  top: 0;
+  right: -13rem;
+  width: 13rem;
+
+  @include smaller-than($mobile-width) {
+    .livingcss__navbar--open & { right: 0; }
+  }
+
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+
+    list-style-type: none;
+  }
+
+  li:last-of-type a {
+    border-bottom: 1px solid $color-medium;
+  }
+
+  li[data-nav-id="index.html"] { display: none; }
+}
+
+.livingcss__off-canvas-link--main {
+    display: block;
+
+    padding: $spacing-base 0;
+    border-top: 1px solid $color-medium;
+
+    color: $color-black;
+    text-align: center;
+    text-decoration: none;
+  }
+
+.livingcss__off-canvas-link--active {
+  
+  font-weight: 700;
+}
+
+// The title atop the off-canvas navigation
+.livingcss__off-canvas-menu-title {
+  text-align: center;
+}

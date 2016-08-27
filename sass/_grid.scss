@@ -9,15 +9,10 @@
   right: 0;
 }
 
-.livingcss__nav,
 .livingcss__main {
   box-sizing: border-box;
   padding: $spacing-small $spacing-base;
   margin-top: $spacing-small;
-}
-
-.livingcss__nav {
-  @include smaller-than($mobile-width) { display: none; }
 }
 
 @include larger-than($medium-width) {
@@ -26,29 +21,15 @@
     float: right;
   }
 
-  .livingcss__nav {
+  .livingcss__sidenav {
     width: 32.5%;
     float: left;
   }
 }
 
 @include larger-than($large-width) {
-  .livingcss__main {
-    width: 72.5%;
-  }
+  .livingcss__main { width: 72.5%; }
 
-  .livingcss__nav {
-    width: 22.5%;
-  }
-}
-
-.livingcss__main-nav--open  {
-
-  @include smaller-than($mobile-width) {
-
-    .livingcss__wrapper {
-       right: 13rem;
-    }
-  }  
+  .livingcss__sidenav { width: 22.5%; }
 }
 

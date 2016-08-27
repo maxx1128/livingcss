@@ -14,16 +14,16 @@
         activeLink.classList.remove('livingcss__nav-link--active');
       }*/
 
-      $('.livingcss__nav-link').removeClass('livingcss__nav-link--active');
+      $('.livingcss__sidenav-link').removeClass('livingcss__sidenav-link--active');
 
-      link.classList.add('livingcss__nav-link--active');
+      link.classList.add('livingcss__sidenav-link--active');
 
-      $('.livingcss__parent').removeClass('livingcss__parent-link--expanded');
+      $('.livingcss__sidenav-parent').removeClass('livingcss__sidenav-parent-link--expanded');
 
-      $(full_item).closest('.livingcss__parent').addClass('livingcss__parent-link--expanded');
+      $(full_item).closest('.livingcss__sidenav-parent').addClass('livingcss__sidenav-parent-link--expanded');
 
       if (child) {
-        $(full_item).closest('.livingcss__parent').find('.livingcss__parent-link').addClass('livingcss__nav-link--active');
+        $(full_item).closest('.livingcss__sidenav-parent').find('.livingcss__sidenav-parent-link').addClass('livingcss__sidenav-link--active');
 
         // $(full_item).closest('.livingcss__parent').addClass('livingcss__parent-link--expanded');
       }
@@ -35,12 +35,12 @@
   }
 
   // set active link when
-  var nav = document.querySelector('.livingcss__nav');
+  var nav = document.querySelector('.livingcss__sidenav');
   var sections = $('article.livingcss__article, section.livingcss__section') // document.querySelectorAll('article.livingcss__article');
   var sectionPositions = [];
 
   // set the current link based on the hash
-  var currentLink = document.querySelector('.livingcss__nav-link[href="' + window.location.hash + '"]');
+  var currentLink = document.querySelector('.livingcss__navbar-link[href="' + window.location.hash + '"]');
   setActiveLink(currentLink);
 
   // save section positions for scrolling
@@ -64,37 +64,29 @@
     var height = "innerHeight" in window 
                ? window.innerHeight
                : document.documentElement.offsetHeight; 
-    var y = window.scrollY + (height / 2);
+    var y = window.scrollY + (height / 1.5);
 
     // fix the sidebar nav
     if (nav.getBoundingClientRect().top <= 0 && y > 50) {
-      nav.classList.add('livingcss__nav--fixed');
+      nav.classList.add('livingcss__sidenav--fixed');
     }
     else {
-      nav.classList.remove('livingcss__nav--fixed');
+      nav.classList.remove('livingcss__sidenav--fixed');
     }
 
-    // window is scrolled to the very bottom so set last section as active
-    if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
-      var activeSection = document.querySelector('.livingcss__nav .livingcss__nav-link:last-child');
-      setActiveLink(activeSection);
-    }
-    // look for which section is being viewed
-    else {
-      for (var i = 0; i < sections.length; i++) {
-        // console.log(sectionPositions[i]);
-        
-        if (y >= sectionPositions[i] &&
-            (sectionPositions[i+1] ? y < sectionPositions[i+1] : true)) {
-          var id = sections[i].getAttribute('id');
-          var activeSection = document.querySelector('.livingcss__nav .livingcss__nav-link[href="#'+id+'"]');
-          var childSection = hasClass(activeSection, 'livingcss__nav-link--child');
+    for (var i = 0; i < sections.length; i++) {
+      // console.log(sectionPositions[i]);
+      
+      if (y >= sectionPositions[i] &&
+          (sectionPositions[i+1] ? y < sectionPositions[i+1] : true)) {
+        var id = sections[i].getAttribute('id');
+        var activeSection = document.querySelector('.livingcss__sidenav .livingcss__sidenav-link[href="#'+id+'"]');
+        var childSection = hasClass(activeSection, 'livingcss__sidenav-link--child');
 
-          var full_activeSection = $('.livingcss__nav .livingcss__nav-link[href="#'+id+'"]');
+        var full_activeSection = $('.livingcss__sidenav .livingcss__sidenav-link[href="#'+id+'"]');
 
-          setActiveLink(activeSection, full_activeSection, childSection);
+        setActiveLink(activeSection, full_activeSection, childSection);
 
-        }
       }
     }
   });
@@ -103,7 +95,7 @@
   var menu = document.querySelector('.livingcss__menu');
   if (menu) {
     menu.addEventListener('click', function(e) {
-      document.body.classList.toggle('livingcss__main-nav--open')
+      document.body.classList.toggle('livingcss__navbar--open')
     });
   }
 })(window, document);

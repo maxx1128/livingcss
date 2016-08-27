@@ -1,0 +1,30 @@
+.livingcss__navbar {
+  
+  @include smaller-than($mobile-width) { display: none; }
+}
+
+.livingcss__navbar-container {
+  
+  border-bottom: 1px solid $color-dark;
+}
+
+.livingcss__navbar-link {
+
+  display: inline-block;
+  margin: $spacing-small;
+  padding: $spacing-small;
+
+  text-decoration: none;
+
+  &[href="index.html"] { display: none; }
+}
+
+.livingcss__navbar-link:hover,
+.livingcss__navbar-link:active,
+.livingcss__navbar-link:focus,
+.livingcss__navbar-link--active {
+
+  color: $color-blank;
+
+  background-color: $color-dark;
+}
