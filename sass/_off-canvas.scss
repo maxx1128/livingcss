@@ -8,12 +8,21 @@
 
 
 .livingcss__menu {
+  position: absolute;
+  right: 1.625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  font-size: 1rem;
+  background: transparent;
+  cursor: pointer;
+  background: #1976D2;
+  padding: 0.40625rem 0.8125rem;
 
   @include larger-than($medium-width) {
     display: none;
   }
 }
-
 
 .livingcss__off-canvas-menu {
   position: absolute;
