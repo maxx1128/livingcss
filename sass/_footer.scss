@@ -2,13 +2,16 @@
  * FOOTER
  */
 .livingcss__footer {
-  padding: $spacing-base;
+  padding: $spacing-base $spacing-large;
   margin-top: $spacing-large;
   
-  text-align: right;
+  text-align: left;
   color: $color-blank;
   
-  background: $color-medium;
+  background: $color-dark;
 
-  a { font-weight: bold; }
+  a {
+    font-weight: bold;
+    color: $color-blank;
+  }
 }

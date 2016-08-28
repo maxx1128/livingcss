@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="livingcss">
 <head>
-  <title>My Awesome Style Guide</title>
+  <title>My Awesome StyleGuide</title>
 
   <!-- critical path css -->
   <style>
@@ -15,22 +15,12 @@
       margin: 0 auto;
       overflow-x: hidden; }
     
+    a {
+      color: #207394; }
+    
     /*
      * HELPERS
-     */
-    .livingcss__inverse-text {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      color: white; }
-    
-    .livingcss__inverse-text a {
-      color: white; }
-    
-    .livingcss__inverse-text a:hover,
-    .livingcss__inverse-text a:active,
-    .livingcss__inverse-text a:focus {
-      color: white; }
-    
+    */
     .clearfix:after {
       visibility: hidden;
       display: block;
@@ -81,6 +71,11 @@
     /*
      * MAIN
      */
+    .livingcss__content::after {
+      clear: both;
+      content: "";
+      display: table; }
+    
     .livingcss__article-title {
       border-bottom: 1px solid #727272;
       margin-bottom: 1.625rem; }
@@ -122,8 +117,8 @@
       position: relative; }
     
     .livingcss__header-title-container {
-      padding: 1rem;
-      background: #5283c5; }
+      padding: 1rem 2rem;
+      background: #833118; }
       .livingcss__header-title-container::after {
         clear: both;
         content: "";
@@ -134,7 +129,10 @@
       font-size: 1.625rem;
       line-height: 1.625rem; }
       .livingcss__header-title a {
-        color: #efefef !important; }
+        color: #eee;
+        text-decoration: none; }
+        .livingcss__header-title a:hover {
+          text-decoration: underline; }
       @media (min-width: 720px) {
         .livingcss__header-title {
           width: 33%;
@@ -154,41 +152,31 @@
           padding-right: 0;
           text-align: right; } }
     
-    .livingcss__menu {
-      position: absolute;
-      right: 1.625rem;
-      top: 50%;
-      transform: translateY(-50%);
-      border: 0;
-      font-size: 1rem;
-      background: transparent;
-      cursor: pointer;
-      background: #1976D2;
-      padding: 0.40625rem 0.8125rem; }
-    
     /*
      * FOOTER
      */
     .livingcss__footer {
-      padding: 1rem;
+      padding: 1rem 2rem;
       margin-top: 2rem;
-      text-align: right;
-      color: #efefef;
-      background: #5283c5; }
+      text-align: left;
+      color: #eee;
+      background: #833118; }
       .livingcss__footer a {
-        font-weight: bold; }
+        font-weight: bold;
+        color: #eee; }
     
-    @media (max-width: 720px) {
-      .livingcss__navbar {
-        display: none; } }
-    
-    .livingcss__navbar-container {
-      border-bottom: 1px solid #183973; }
+    .livingcss__navbar {
+      text-align: center;
+      border-bottom: 1px solid #833118; }
+      @media (max-width: 720px) {
+        .livingcss__navbar {
+          display: none; } }
     
     .livingcss__navbar-link {
       display: inline-block;
       margin: 0.5rem;
       padding: 0.5rem;
+      color: #207394;
       text-decoration: none; }
       .livingcss__navbar-link[href="index.html"] {
         display: none; }
@@ -197,8 +185,8 @@
     .livingcss__navbar-link:active,
     .livingcss__navbar-link:focus,
     .livingcss__navbar-link--active {
-      color: #efefef;
-      background-color: #183973; }
+      color: #eee;
+      background-color: #207394; }
     
     .livingcss__sidenav {
       display: none; }
@@ -219,7 +207,7 @@
     .livingcss__sidenav-link {
       display: block;
       padding: 0.5rem 1rem;
-      color: #111;
+      color: #207394;
       text-decoration: none; }
     
     .livingcss__sidenav-link:hover,
@@ -228,7 +216,7 @@
     .livingcss__sidenav-link--active {
       font-weight: 700;
       text-decoration: none;
-      border-left: 3px solid #8ba4e6; }
+      border-left: 3px solid #207394; }
     
     .livingcss__sidenav-container ul {
       list-style-type: none; }
@@ -251,9 +239,20 @@
       The side menu for mobile screens
     
     */
-    @media (min-width: 720px) {
-      .livingcss__menu {
-        display: none; } }
+    .livingcss__menu {
+      position: absolute;
+      right: 1.625rem;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 0;
+      font-size: 1rem;
+      background: transparent;
+      cursor: pointer;
+      background: #1976D2;
+      padding: 0.40625rem 0.8125rem; }
+      @media (min-width: 720px) {
+        .livingcss__menu {
+          display: none; } }
     
     .livingcss__off-canvas-menu {
       position: absolute;
@@ -268,15 +267,15 @@
         padding-left: 0;
         list-style-type: none; }
       .livingcss__off-canvas-menu li:last-of-type a {
-        border-bottom: 1px solid #5283c5; }
+        border-bottom: 1px solid #ee8329; }
       .livingcss__off-canvas-menu li[data-nav-id="index.html"] {
         display: none; }
     
     .livingcss__off-canvas-link--main {
       display: block;
       padding: 1rem 0;
-      border-top: 1px solid #5283c5;
-      color: #111;
+      border-top: 1px solid #ee8329;
+      color: #626262;
       text-align: center;
       text-decoration: none; }
     
@@ -362,9 +361,9 @@
   <div class="livingcss__wrapper">
     <!-- The header with title, logo, and navbar -->
     <header class="livingcss__header">
-      <div class="livingcss__header-title-container livingcss__inverse-text">
+      <div class="livingcss__header-title-container">
         <h1 class="livingcss__header-title">
-          <a href="index.html">My Awesome Style Guide</a>
+          <a href="index.html">My Awesome StyleGuide</a>
         </h1>
 
         <div class="livingcss__header-logo">
@@ -372,8 +371,7 @@
         </div>
       </div>
 
-      <div class="livingcss__navbar-container">
-        <nav class="livingcss__navbar">
+      <nav class="livingcss__navbar">
           <a class="livingcss__navbar-link " href="index.html">
             index
           </a>
@@ -383,13 +381,12 @@
           <a class="livingcss__navbar-link " href="navigation.html">
             Navigation
           </a>
-        </nav>
-      </div>
+      </nav>
 
-      <button class="livingcss__menu livingcss__inverse-text">Menu</button>
+      <button class="livingcss__menu">Menu</button>
     </header>
 
-    <div class="clearfix livingcss__content">
+    <div class="livingcss__content">
 
       <nav class="livingcss__sidenav">
         <div class="livingcss__sidenav-container">
@@ -410,7 +407,7 @@
       <main class="livingcss__main" role="main">
 
         <article class="livingcss__article" id="buttons">
-          <h1 class="livingcss__article-title">Buttons</h1><div class="livingcss__section-description">
+          <h2 class="livingcss__article-title">Buttons</h2><div class="livingcss__section-description">
   <p>The Button <code>.btn</code> class can be applied to <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, or <code>&lt;a&gt;</code> elements. Extra stuff has now been added here!</p>
 
 <livingcss-example><button class="btn">Button</button>
@@ -424,7 +421,9 @@
 </div>
 
 <section class="livingcss__section" id="buttons-primary-button">
-  <h2>Primary Button</h2><div class="livingcss__section-description">
+  <h3>
+    Primary Button
+  </h3><div class="livingcss__section-description">
   <p>A primary button</p>
 
 <livingcss-example><button class="btn primary">Button</button>
@@ -443,8 +442,15 @@
 
     </div>
 
-    <footer class="livingcss__footer livingcss__inverse-text">
-      <div class=">Style Guide generated with <a href="https://github.com/straker/livingcss">LivingCSS</a>.</div>
+    <footer class="livingcss__footer">
+      
+        <p>
+          This is my awesome StyleGuide footer
+        </p>
+
+      <p>
+        Style Guide generated with <a href="https://github.com/straker/livingcss">LivingCSS</a>.
+      </p>
     </footer>
 
   </div>

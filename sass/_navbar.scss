@@ -1,12 +1,12 @@
 .livingcss__navbar {
+
+  text-align: center;
+
+  border-bottom: 1px solid $color-dark;
   
   @include smaller-than($mobile-width) { display: none; }
 }
 
-.livingcss__navbar-container {
-  
-  border-bottom: 1px solid $color-dark;
-}
 
 .livingcss__navbar-link {
 
@@ -14,6 +14,7 @@
   margin: $spacing-small;
   padding: $spacing-small;
 
+  color: $color-action;
   text-decoration: none;
 
   &[href="index.html"] { display: none; }
@@ -26,5 +27,5 @@
 
   color: $color-blank;
 
-  background-color: $color-dark;
+  background-color: $color-action;
 }

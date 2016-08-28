@@ -8,22 +8,12 @@ body {
   margin: 0 auto;
   overflow-x: hidden; }
 
+a {
+  color: #207394; }
+
 /*
  * HELPERS
- */
-.livingcss__inverse-text {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: white; }
-
-.livingcss__inverse-text a {
-  color: white; }
-
-.livingcss__inverse-text a:hover,
-.livingcss__inverse-text a:active,
-.livingcss__inverse-text a:focus {
-  color: white; }
-
+*/
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -74,6 +64,11 @@ body {
 /*
  * MAIN
  */
+.livingcss__content::after {
+  clear: both;
+  content: "";
+  display: table; }
+
 .livingcss__article-title {
   border-bottom: 1px solid #727272;
   margin-bottom: 1.625rem; }
@@ -115,8 +110,8 @@ livingcss-example {
   position: relative; }
 
 .livingcss__header-title-container {
-  padding: 1rem;
-  background: #5283c5; }
+  padding: 1rem 2rem;
+  background: #833118; }
   .livingcss__header-title-container::after {
     clear: both;
     content: "";
@@ -127,7 +122,10 @@ livingcss-example {
   font-size: 1.625rem;
   line-height: 1.625rem; }
   .livingcss__header-title a {
-    color: #efefef !important; }
+    color: #eee;
+    text-decoration: none; }
+    .livingcss__header-title a:hover {
+      text-decoration: underline; }
   @media (min-width: 720px) {
     .livingcss__header-title {
       width: 33%;
@@ -147,41 +145,31 @@ livingcss-example {
       padding-right: 0;
       text-align: right; } }
 
-.livingcss__menu {
-  position: absolute;
-  right: 1.625rem;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 0;
-  font-size: 1rem;
-  background: transparent;
-  cursor: pointer;
-  background: #1976D2;
-  padding: 0.40625rem 0.8125rem; }
-
 /*
  * FOOTER
  */
 .livingcss__footer {
-  padding: 1rem;
+  padding: 1rem 2rem;
   margin-top: 2rem;
-  text-align: right;
-  color: #efefef;
-  background: #5283c5; }
+  text-align: left;
+  color: #eee;
+  background: #833118; }
   .livingcss__footer a {
-    font-weight: bold; }
+    font-weight: bold;
+    color: #eee; }
 
-@media (max-width: 720px) {
-  .livingcss__navbar {
-    display: none; } }
-
-.livingcss__navbar-container {
-  border-bottom: 1px solid #183973; }
+.livingcss__navbar {
+  text-align: center;
+  border-bottom: 1px solid #833118; }
+  @media (max-width: 720px) {
+    .livingcss__navbar {
+      display: none; } }
 
 .livingcss__navbar-link {
   display: inline-block;
   margin: 0.5rem;
   padding: 0.5rem;
+  color: #207394;
   text-decoration: none; }
   .livingcss__navbar-link[href="index.html"] {
     display: none; }
@@ -190,8 +178,8 @@ livingcss-example {
 .livingcss__navbar-link:active,
 .livingcss__navbar-link:focus,
 .livingcss__navbar-link--active {
-  color: #efefef;
-  background-color: #183973; }
+  color: #eee;
+  background-color: #207394; }
 
 .livingcss__sidenav {
   display: none; }
@@ -212,7 +200,7 @@ livingcss-example {
 .livingcss__sidenav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #111;
+  color: #207394;
   text-decoration: none; }
 
 .livingcss__sidenav-link:hover,
@@ -221,7 +209,7 @@ livingcss-example {
 .livingcss__sidenav-link--active {
   font-weight: 700;
   text-decoration: none;
-  border-left: 3px solid #8ba4e6; }
+  border-left: 3px solid #207394; }
 
 .livingcss__sidenav-container ul {
   list-style-type: none; }
@@ -244,9 +232,20 @@ livingcss-example {
   The side menu for mobile screens
 
 */
-@media (min-width: 720px) {
-  .livingcss__menu {
-    display: none; } }
+.livingcss__menu {
+  position: absolute;
+  right: 1.625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  font-size: 1rem;
+  background: transparent;
+  cursor: pointer;
+  background: #1976D2;
+  padding: 0.40625rem 0.8125rem; }
+  @media (min-width: 720px) {
+    .livingcss__menu {
+      display: none; } }
 
 .livingcss__off-canvas-menu {
   position: absolute;
@@ -261,15 +260,15 @@ livingcss-example {
     padding-left: 0;
     list-style-type: none; }
   .livingcss__off-canvas-menu li:last-of-type a {
-    border-bottom: 1px solid #5283c5; }
+    border-bottom: 1px solid #ee8329; }
   .livingcss__off-canvas-menu li[data-nav-id="index.html"] {
     display: none; }
 
 .livingcss__off-canvas-link--main {
   display: block;
   padding: 1rem 0;
-  border-top: 1px solid #5283c5;
-  color: #111;
+  border-top: 1px solid #ee8329;
+  color: #626262;
   text-align: center;
   text-decoration: none; }
 

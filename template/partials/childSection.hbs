@@ -1,8 +1,11 @@
 <section class="livingcss__section" id="{{id}}">
-  <h{{depth}}>{{name}}</h{{depth}}>
+  <h3>
+    {{name}}
+  </h3>
+  
   {{~> section}}
 
   {{#children}}
-  {{~> childSection}}
+    {{~> childSection}}
   {{/children}}
 </section>

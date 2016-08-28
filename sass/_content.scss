@@ -3,6 +3,10 @@
  * MAIN
  */
 
+.livingcss__content {
+  @include clearfix();
+}
+
 .livingcss__article-title {
   border-bottom: 1px solid #727272;
   margin-bottom: 1.625rem;

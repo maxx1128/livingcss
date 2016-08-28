@@ -12,9 +12,9 @@
 
 .livingcss__header-title-container {
   @include clearfix();
-  padding: $spacing-base;
+  padding: $spacing-base $spacing-large;
 
-  background: $color-medium;
+  background: $color-dark;
 }
 
 .livingcss__header-title {
@@ -23,7 +23,12 @@
   font-size: 1.625rem;
   line-height: 1.625rem;
 
-  a { color: $color-blank !important; }
+  a {
+    color: $color-blank;
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
 
   @include larger-than($mobile-width) {
     width: 33%;

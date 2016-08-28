@@ -81,7 +81,7 @@
   <div class="livingcss__wrapper">
     <!-- The header with title, logo, and navbar -->
     <header class="livingcss__header">
-      <div class="livingcss__header-title-container livingcss__inverse-text">
+      <div class="livingcss__header-title-container">
         <h1 class="livingcss__header-title">
           <a href="{{navbar.0.url}}">{{title}}</a>
         </h1>
@@ -92,21 +92,19 @@
       </div>
 
       {{#if navbar}}
-      <div class="livingcss__navbar-container">
-        <nav class="livingcss__navbar">
+      <nav class="livingcss__navbar">
         {{#each navbar}}
           <a class="livingcss__navbar-link {{#if selected}}livingcss__navbar-link--active{{/if}}" href="{{url}}">
             {{name}}
           </a>
         {{/each}}
-        </nav>
-      </div>
+      </nav>
 
-      <button class="livingcss__menu livingcss__inverse-text">{{{menuText}}}</button>
+      <button class="livingcss__menu">{{{menuText}}}</button>
       {{/if}}
     </header>
 
-    <div class="clearfix livingcss__content">
+    <div class="livingcss__content">
 
       <nav class="livingcss__sidenav">
         <div class="livingcss__sidenav-container">
@@ -134,7 +132,7 @@
 
         {{#each sections}}
         <article class="livingcss__article" id="{{id}}">
-          <h1 class="livingcss__article-title">{{name}}</h1>
+          <h2 class="livingcss__article-title">{{name}}</h2>
           
           {{~> section}}
 
@@ -148,8 +146,17 @@
 
     </div>
 
-    <footer class="livingcss__footer livingcss__inverse-text">
-      <div class=">{{{footerHTML}}}</div>
+    <footer class="livingcss__footer">
+      
+      {{#if footerText}}
+        <p>
+          {{ footerText }}
+        </p>
+      {{/if}}
+
+      <p>
+        {{{ footerHTML }}}
+      </p>
     </footer>
 
   </div>
