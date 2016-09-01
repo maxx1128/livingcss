@@ -8,16 +8,17 @@
 
 
 .livingcss__menu {
+  padding: $spacing-small $spacing-base;
   position: absolute;
   right: 1.625rem;
   top: 50%;
   transform: translateY(-50%);
-  border: 0;
-  font-size: 1rem;
-  background: transparent;
   cursor: pointer;
-  background: #1976D2;
-  padding: 0.40625rem 0.8125rem;
+
+  color: $color-blank;
+
+  border: 0;
+  background: $color-action;
 
   @include larger-than($medium-width) {
     display: none;

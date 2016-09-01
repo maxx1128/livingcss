@@ -41,6 +41,9 @@ a {
   position: relative;
   transition: right 0.2s;
   right: 0; }
+  @media (max-width: 720px) {
+    .livingcss__navbar--open .livingcss__wrapper {
+      right: 13rem; } }
 
 .livingcss__main {
   box-sizing: border-box;
@@ -233,16 +236,15 @@ livingcss-example {
 
 */
 .livingcss__menu {
+  padding: 0.5rem 1rem;
   position: absolute;
   right: 1.625rem;
   top: 50%;
   transform: translateY(-50%);
-  border: 0;
-  font-size: 1rem;
-  background: transparent;
   cursor: pointer;
-  background: #1976D2;
-  padding: 0.40625rem 0.8125rem; }
+  color: #eee;
+  border: 0;
+  background: #207394; }
   @media (min-width: 720px) {
     .livingcss__menu {
       display: none; } }

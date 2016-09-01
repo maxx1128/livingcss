@@ -7,6 +7,14 @@
   position: relative;
   transition: right 0.2s;
   right: 0;
+
+  .livingcss__navbar--open & {
+
+    @include smaller-than($mobile-width) {
+      right: 13rem;
+    }
+
+  }
 }
 
 .livingcss__main {
